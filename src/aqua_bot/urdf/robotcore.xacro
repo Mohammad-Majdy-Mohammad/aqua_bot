@@ -53,7 +53,7 @@
               <box size="0.6 0.6 1"/>
           </geometry>
       </collision>
-      <xacro:inertial_box mass="30" x="0.6" y="0.6" z="1">
+      <xacro:inertial_box mass="35" x="0.6" y="0.6" z="1">
           <origin xyz="0.3 0 0.5" rpy="0 0 0"/>
       </xacro:inertial_box>
   </link>
@@ -186,6 +186,27 @@
 </joint>
 
 
+<!-- gazebo-->
+
+  <gazebo reference ="joint_front_left">
+    <mu1 value=".001"/>
+    <mu2 value=".001"/>
+  </gazebo>
+
+  <gazebo reference ="joint_front_right">
+    <mu1 value=".001"/>
+    <mu2 value=".001"/>
+  </gazebo>
+
+<gazebo reference ="joint_rear_left">
+    <mu1 value=".001"/>
+    <mu2 value=".001"/>
+  </gazebo>
+
+  <gazebo reference ="joint_rear_right">
+    <mu1 value=".001"/>
+    <mu2 value=".001"/>
+  </gazebo>
 
   <!-- LiDAR sensor -->
 
